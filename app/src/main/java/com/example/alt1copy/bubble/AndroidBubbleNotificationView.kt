@@ -91,7 +91,7 @@ class AndroidBubbleNotificationView(
                     Intent(context, MainActivity::class.java)
                         .setAction(Intent.ACTION_VIEW)
                         .setData(contentUri),
-                    PendingIntent.FLAG_UPDATE_CURRENT
+                    PendingIntent.FLAG_MUTABLE
                 )
             )
             setShowWhen(true)
@@ -131,7 +131,7 @@ class AndroidBubbleNotificationView(
                 Intent(context, BubbleActivity::class.java)
                     .setAction(Intent.ACTION_VIEW)
                     .setData(contentUri),
-                PendingIntent.FLAG_UPDATE_CURRENT
+                PendingIntent.FLAG_MUTABLE
             )
 
         // Create bubble metadata
